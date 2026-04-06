@@ -41,178 +41,209 @@ export default function Contact() {
                 Get In <span className="text-[#fbeb78]">Touch</span>
               </h1>
               <p className="text-xl text-white/90 leading-relaxed">
-                Have a project in mind? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+                Have a project in mind? We'd love to hear from you. Let's discuss how we can help bring your vision to life.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Contact Info Cards */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid md:grid-cols-3 gap-8 -mt-32 relative z-10">
-              {/* Email */}
-              <div className="bg-white rounded-2xl shadow-xl p-8 text-center hover:shadow-2xl transition-shadow">
-                <div className="w-16 h-16 mx-auto mb-4 bg-[#725eed]/10 rounded-full flex items-center justify-center">
-                  <svg className="w-8 h-8 text-[#725eed]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold mb-2">Email Us</h3>
-                <p className="text-gray-600 mb-2">Our team is here to help</p>
-                <a href="mailto:info@trybenode.com" className="text-[#725eed] font-semibold hover:underline">
-                  info@trybenode.com
-                </a>
-              </div>
-
-              {/* Phone */}
-              <div className="bg-white rounded-2xl shadow-xl p-8 text-center hover:shadow-2xl transition-shadow">
-                <div className="w-16 h-16 mx-auto mb-4 bg-[#fbeb78]/30 rounded-full flex items-center justify-center">
-                  <svg className="w-8 h-8 text-[#2d236d]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold mb-2">Call Us</h3>
-                <p className="text-gray-600 mb-2">24/7 Support Available</p>
-                <a href="tel:+2341234567890" className="text-[#725eed] font-semibold hover:underline">
-                  +234 123 456 7890
-                </a>
-              </div>
-
-              {/* Location */}
-              <div className="bg-white rounded-2xl shadow-xl p-8 text-center hover:shadow-2xl transition-shadow">
-                <div className="w-16 h-16 mx-auto mb-4 bg-[#2d236d]/10 rounded-full flex items-center justify-center">
-                  <svg className="w-8 h-8 text-[#2d236d]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold mb-2">Visit Us</h3>
-                <p className="text-gray-600 mb-2">Our Headquarters</p>
-                <p className="text-[#725eed] font-semibold">
-                  Leadcity University<br />
-                  Ibadan, Nigeria
-                </p>
-              </div>
+        {/* Contact Form Section */}
+        <section className="py-20 bg-white">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold mb-4">
+                Send us a <span className="text-[#725eed]">Message</span>
+              </h2>
+              <p className="text-gray-600">
+                Fill out the form below and we'll get back to you within 24 hours.
+              </p>
             </div>
+
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
+                  Full Name *
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#725eed] focus:border-transparent outline-none transition-all"
+                  placeholder="John Doe"
+                />
+              </div>
+
+              <div className="grid sm:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
+                    Email Address *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#725eed] focus:border-transparent outline-none transition-all"
+                    placeholder="john@example.com"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
+                    Phone Number
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#725eed] focus:border-transparent outline-none transition-all"
+                    placeholder="+234 123 456 7890"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="subject" className="block text-sm font-semibold text-gray-700 mb-2">
+                  Subject *
+                </label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#725eed] focus:border-transparent outline-none transition-all"
+                  placeholder="How can we help you?"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
+                  Message *
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  rows={6}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#725eed] focus:border-transparent outline-none transition-all resize-none"
+                  placeholder="Tell us about your project..."
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="w-full px-8 py-4 bg-[#2d236d] text-white font-semibold rounded-lg hover:bg-[#725eed] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              >
+                Send Message
+              </button>
+            </form>
           </div>
         </section>
 
-        {/* Contact Form & Map Section */}
+        {/* Map & Contact Info Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-12">
-              {/* Contact Form */}
-              <div>
-                <h2 className="text-4xl font-bold mb-4">
-                  Send us a <span className="text-[#725eed]">Message</span>
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              {/* Contact Information - Left */}
+              <div className="space-y-8">
+                <h2 className="text-4xl font-bold mb-8">
+                  Contact <span className="text-[#725eed]">Information</span>
                 </h2>
-                <p className="text-gray-600 mb-8">
-                  Fill out the form below and we'll get back to you within 24 hours.
-                </p>
 
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
-                      Full Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#725eed] focus:border-transparent outline-none transition-all"
-                      placeholder="John Doe"
-                    />
+                {/* Email */}
+                <div className="flex items-start gap-4">
+                  <div className="w-14 h-14 bg-[#725eed]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg className="w-7 h-7 text-[#725eed]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
                   </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">Email Us</h3>
+                    <p className="text-gray-600 mb-1">Our team is here to help</p>
+                    <a href="mailto:info@trybenode.com" className="text-[#725eed] font-semibold hover:underline text-lg">
+                      info@trybenode.com
+                    </a>
+                  </div>
+                </div>
 
-                  <div className="grid sm:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
-                        Email Address *
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#725eed] focus:border-transparent outline-none transition-all"
-                        placeholder="john@example.com"
-                      />
+                {/* Phone */}
+                <div className="flex items-start gap-4">
+                  <div className="w-14 h-14 bg-[#fbeb78]/30 rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg className="w-7 h-7 text-[#2d236d]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">Call Us</h3>
+                    <p className="text-gray-600 mb-1">24/7 Support Available</p>
+                    <a href="tel:+2341234567890" className="text-[#725eed] font-semibold hover:underline text-lg">
+                      +234 123 456 7890
+                    </a>
+                  </div>
+                </div>
+
+                {/* Location */}
+                <div className="flex items-start gap-4">
+                  <div className="w-14 h-14 bg-[#2d236d]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg className="w-7 h-7 text-[#2d236d]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">Visit Us</h3>
+                    <p className="text-gray-600 mb-1">Our Headquarters</p>
+                    <p className="text-[#725eed] font-semibold text-lg">
+                      Leadcity University<br />
+                      Ibadan, Nigeria
+                    </p>
+                  </div>
+                </div>
+
+                {/* Business Hours */}
+                <div className="flex items-start gap-4">
+                  <div className="w-14 h-14 bg-[#725eed]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg className="w-7 h-7 text-[#725eed]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-3">Business Hours</h3>
+                    <div className="space-y-2 text-base">
+                      <div className="flex gap-2">
+                        <span className="text-gray-600 w-32">Mon - Fri:</span>
+                        <span className="font-semibold text-gray-900">9:00 AM - 6:00 PM</span>
+                      </div>
+                      <div className="flex gap-2">
+                        <span className="text-gray-600 w-32">Saturday:</span>
+                        <span className="font-semibold text-gray-900">10:00 AM - 4:00 PM</span>
+                      </div>
+                      <div className="flex gap-2">
+                        <span className="text-gray-600 w-32">Sunday:</span>
+                        <span className="font-semibold text-gray-900">Closed</span>
+                      </div>
+                      <p className="text-sm text-gray-500 mt-3">
+                        * 24/7 support available for emergencies
+                      </p>
                     </div>
-
-                    <div>
-                      <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
-                        Phone Number
-                      </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#725eed] focus:border-transparent outline-none transition-all"
-                        placeholder="+234 123 456 7890"
-                      />
-                    </div>
                   </div>
-
-                  <div>
-                    <label htmlFor="subject" className="block text-sm font-semibold text-gray-700 mb-2">
-                      Subject *
-                    </label>
-                    <input
-                      type="text"
-                      id="subject"
-                      name="subject"
-                      value={formData.subject}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#725eed] focus:border-transparent outline-none transition-all"
-                      placeholder="How can we help you?"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
-                      Message *
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      required
-                      rows={6}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#725eed] focus:border-transparent outline-none transition-all resize-none"
-                      placeholder="Tell us about your project..."
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full px-8 py-4 bg-[#2d236d] text-white font-semibold rounded-lg hover:bg-[#725eed] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-                  >
-                    Send Message
-                  </button>
-                </form>
+                </div>
               </div>
 
-              {/* Map & Location Info */}
+              {/* Map - Right */}
               <div>
-                <h2 className="text-4xl font-bold mb-4">
-                  Our <span className="text-[#725eed]">Location</span>
-                </h2>
-                <p className="text-gray-600 mb-8">
-                  Our headquarters is located at Leadcity University, Ibadan, Nigeria. Feel free to visit us during business hours.
-                </p>
-
-                {/* Map */}
-                <div className="rounded-2xl overflow-hidden shadow-xl mb-6 h-96">
+                <div className="rounded-2xl overflow-hidden shadow-2xl h-[600px]">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.6542!2d3.8874!3d7.3775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103992e79d5c3b8d%3A0x7f1b9b7f1e7a8b0e!2sLeadcity%20University!5e0!3m2!1sen!2sng!4v1234567890"
                     width="100%"
@@ -223,35 +254,6 @@ export default function Contact() {
                     referrerPolicy="no-referrer-when-downgrade"
                     title="Leadcity University Location"
                   />
-                </div>
-
-                {/* Business Hours */}
-                <div className="bg-white rounded-2xl shadow-xl p-6">
-                  <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                    <svg className="w-6 h-6 text-[#725eed]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    Business Hours
-                  </h3>
-                  <div className="space-y-2 text-gray-600">
-                    <div className="flex justify-between">
-                      <span>Monday - Friday:</span>
-                      <span className="font-semibold text-gray-900">9:00 AM - 6:00 PM</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Saturday:</span>
-                      <span className="font-semibold text-gray-900">10:00 AM - 4:00 PM</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Sunday:</span>
-                      <span className="font-semibold text-gray-900">Closed</span>
-                    </div>
-                  </div>
-                  <div className="mt-6 pt-6 border-t border-gray-200">
-                    <p className="text-sm text-gray-500">
-                      * 24/7 support available for emergency inquiries
-                    </p>
-                  </div>
                 </div>
               </div>
             </div>
