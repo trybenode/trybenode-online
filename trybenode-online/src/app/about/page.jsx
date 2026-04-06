@@ -10,14 +10,14 @@ export default function About() {
       name: "Allen Oluwatobi Douglas",
       role: "Software Engineer",
       specialty: "Full Stack Mobile & Web Developer",
-      image: "/public/founder-1.jpg", // Replace with actual image
+      image: "/founder-1.jpg",
       description: "Expert in building scalable mobile and web applications with modern frameworks."
     },
     {
       name: "Abdulhaq Abdulrasheed Olabanji",
       role: "Software Engineer",
       specialty: "Cyber Security Expert",
-      image: "/public/founder-2.jpg", // Replace with actual image
+      image: "/founder-2.jpg",
       description: "Specializes in securing digital infrastructure and implementing robust security protocols."
     }
   ];
@@ -132,13 +132,6 @@ export default function About() {
                   {/* Circular founder image */}
                   <div className="flex justify-center mb-6">
                     <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-[#fbeb78] shadow-xl">
-                      <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#725eed]/20 to-[#fbeb78]/20">
-                        <div className="text-center">
-                          <span className="text-6xl">👤</span>
-                          <p className="text-white/60 text-xs mt-2">Add photo</p>
-                        </div>
-                      </div>
-                      {/* When you have images, replace above div with:
                       <Image
                         src={founder.image}
                         alt={founder.name}
@@ -146,7 +139,6 @@ export default function About() {
                         className="object-cover"
                         sizes="200px"
                       />
-                      */}
                     </div>
                   </div>
                   
