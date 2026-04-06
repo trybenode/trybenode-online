@@ -8,10 +8,10 @@ export default function CTA() {
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl opacity-10 -ml-48 -mb-48" />
       
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6">
           Got a Project Idea?
         </h2>
-        <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
+        <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-8 sm:mb-10 max-w-2xl mx-auto">
           Whether it's an e-commerce platform, automated systems, IoT, PropTech, AgriTech, 
           or any innovative solution—bring us your vision and the right information, and we'll make it happen.
         </p>
@@ -19,21 +19,21 @@ export default function CTA() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link 
             href="/contact"
-            className="px-8 py-4 bg-[#fbeb78] text-[#2d236d] font-bold rounded-lg hover:bg-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+            className="px-6 py-3 sm:px-8 sm:py-4 bg-[#fbeb78] text-[#2d236d] text-sm sm:text-base font-bold rounded-lg hover:bg-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
           >
             Get Started Today
           </Link>
           <Link 
             href="/about"
-            className="px-8 py-4 bg-transparent text-white font-semibold rounded-lg border-2 border-white hover:bg-white hover:text-[#2d236d] transition-all duration-300"
-          >
+            className="px-6 py-3 sm:px-8 sm:py-4 bg-transparent text-white text-sm sm:text-base font-semibold rounded-lg border-2 border-white hover:bg-white hover:text-[#2d236d] transition-all duration-300">
+          
             Learn About Us
           </Link>
         </div>
 
         {/* Trust indicators */}
-        <div className="mt-16 pt-12 border-t border-white/20">
-          <p className="text-white/80 mb-6 uppercase tracking-wide text-sm font-semibold">
+        <div className="mt-12 sm:mt-16 pt-8 sm:pt-12 border-t border-white/20">
+          <p className="text-white/80 mb-4 sm:mb-6 uppercase tracking-wide text-xs sm:text-sm font-semibold">
             Trusted by startups and businesses across emerging markets
           </p>
           <div className="flex flex-wrap justify-center items-center gap-8 text-white/60">

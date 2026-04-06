@@ -58,10 +58,10 @@ export default function WhyTrybeNode() {
 
           {/* Right - Content */}
           <div>
-            <h2 className="text-4xl sm:text-5xl font-bold mb-6">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">
               Why Choose <span className="text-[#725eed]">TrybeNode?</span>
             </h2>
-            <p className="text-lg text-gray-600 mb-10">
+            <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-8 sm:mb-10">
               We're not just developers—we're problem-solvers committed to creating 
               impactful digital experiences.
             </p>
@@ -76,10 +76,10 @@ export default function WhyTrybeNode() {
                     {value.icon}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-2">
+                    <h3 className="text-base sm:text-lg font-bold mb-1 sm:mb-2">
                       {value.title}
                     </h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                       {value.description}
                     </p>
                   </div>

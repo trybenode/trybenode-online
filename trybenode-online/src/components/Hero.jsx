@@ -13,14 +13,14 @@ export default function Hero() {
           {/* Left Content */}
           <div className="text-center lg:text-left">
             {/* Headline */}
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 tracking-tight">
               Technology Solutions
               <br />
               <span className="text-[#725eed]">For Every Industry</span>
             </h1>
             
             {/* Subheadline */}
-            <p className="text-xl sm:text-2xl text-gray-600 mb-10 leading-relaxed">
+            <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-8 sm:mb-10 leading-relaxed">
               E-commerce platforms, automated systems, IoT, PropTech, AgriTech—we build 
               practical digital solutions across industries with the right expertise and insights.
             </p>
@@ -29,31 +29,31 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
               <Link 
                 href="/contact"
-                className="px-8 py-4 bg-[#2d236d] text-white font-semibold rounded-lg hover:bg-[#725eed] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                className="px-6 py-3 sm:px-8 sm:py-4 bg-[#2d236d] text-white text-sm sm:text-base font-semibold rounded-lg hover:bg-[#725eed] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
                 Start Your Project
               </Link>
               <Link 
                 href="/projects"
-                className="px-8 py-4 bg-white text-[#2d236d] font-semibold rounded-lg border-2 border-[#2d236d] hover:bg-[#fbeb78] hover:border-[#fbeb78] transition-all duration-300"
-              >
+                className="px-6 py-3 sm:px-8 sm:py-4 bg-white text-[#2d236d] text-sm sm:text-base font-semibold rounded-lg border-2 border-[#2d236d] hover:bg-[#fbeb78] hover:border-[#fbeb78] transition-all duration-300">
+              
                 View Projects
               </Link>
             </div>
             
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 mt-16 pt-8 border-t border-gray-200">
+            <div className="grid grid-cols-3 gap-4 sm:gap-6 mt-12 sm:mt-16 pt-6 sm:pt-8 border-t border-gray-200">
               <div>
-                <div className="text-4xl font-bold text-[#725eed] mb-2">✓</div>
-                <div className="text-sm text-gray-600 uppercase tracking-wide">Registered Company</div>
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#725eed] mb-1 sm:mb-2">✓</div>
+                <div className="text-xs sm:text-sm text-gray-600 uppercase tracking-wide">Registered Company</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-[#725eed] mb-2">∞</div>
-                <div className="text-sm text-gray-600 uppercase tracking-wide">Scalable Systems</div>
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#725eed] mb-1 sm:mb-2">∞</div>
+                <div className="text-xs sm:text-sm text-gray-600 uppercase tracking-wide">Scalable Systems</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-[#725eed] mb-2">24/7</div>
-                <div className="text-sm text-gray-600 uppercase tracking-wide">Active Support</div>
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#725eed] mb-1 sm:mb-2">24/7</div>
+                <div className="text-xs sm:text-sm text-gray-600 uppercase tracking-wide">Active Support</div>
               </div>
             </div>
           </div>

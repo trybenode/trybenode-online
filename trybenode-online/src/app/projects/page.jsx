@@ -68,10 +68,10 @@ export default function Projects() {
           
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto">
-              <h1 className="text-5xl sm:text-6xl font-bold mb-6 tracking-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 tracking-tight">
                 Our <span className="text-[#725eed]">Projects</span>
               </h1>
-              <p className="text-xl text-gray-600 leading-relaxed">
+              <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed">
                 Explore the innovative solutions we've built for businesses across various industries.
               </p>
             </div>
@@ -104,7 +104,7 @@ export default function Projects() {
             <h2 className="text-4xl font-bold mb-6">
               Have a Project <span className="text-[#725eed]">In Mind?</span>
             </h2>
-            <p className="text-xl text-gray-600 mb-10">
+            <p className="text-2xl sm:text-3xl lg:text-4xl text-gray-600 mb-10">
               Let's turn your vision into reality with our expertise and innovative approach.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

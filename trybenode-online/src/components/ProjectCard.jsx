@@ -109,20 +109,20 @@ export default function ProjectCard({
 
       {/* Content Section */}
       <div className={`${reverse ? 'lg:order-1' : 'lg:order-2'}`}>
-        <h3 className="text-4xl font-bold mb-4">
+        <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">
           {title}
         </h3>
-        <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+        <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-4 sm:mb-6 leading-relaxed">
           {description}
         </p>
 
         {/* Features */}
         {features && features.length > 0 && (
-          <div className="mb-6">
-            <h4 className="text-xl font-semibold mb-3 text-[#725eed]">Key Features</h4>
-            <ul className="space-y-2">
+          <div className="mb-4 sm:mb-6">
+            <h4 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3 text-[#725eed]">Key Features</h4>
+            <ul className="space-y-1 sm:space-y-2">
               {features.map((feature, index) => (
-                <li key={index} className="flex items-start gap-2">
+                <li key={index} className="flex items-start gap-2 text-sm sm:text-base">
                   <span className="text-[#fbeb78] mt-1">✦</span>
                   <span className="text-gray-700">{feature}</span>
                 </li>
@@ -133,14 +133,13 @@ export default function ProjectCard({
 
         {/* Technologies */}
         {technologies && technologies.length > 0 && (
-          <div className="mb-8">
-            <h4 className="text-xl font-semibold mb-3 text-[#725eed]">Technologies Used</h4>
+          <div className="mb-6 sm:mb-8">
+            <h4 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3 text-[#725eed]">Technologies Used</h4>
             <div className="flex flex-wrap gap-2">
               {technologies.map((tech, index) => (
                 <span 
                   key={index} 
-                  className="px-4 py-2 bg-[#2d236d] text-white rounded-full text-sm font-medium"
-                >
+                  className="px-3 py-1.5 sm:px-4 sm:py-2 bg-[#2d236d] text-white rounded-full text-xs sm:text-sm font-medium">
                   {tech}
                 </span>
               ))}
@@ -154,10 +153,10 @@ export default function ProjectCard({
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-[#725eed] text-white font-semibold rounded-lg hover:bg-[#2d236d] transition-all duration-300 shadow-lg hover:shadow-xl"
+            className="inline-flex items-center gap-2 px-5 py-2.5 sm:px-6 sm:py-3 bg-[#725eed] text-white text-sm sm:text-base font-semibold rounded-lg hover:bg-[#2d236d] transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             Visit Project
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
           </Link>
