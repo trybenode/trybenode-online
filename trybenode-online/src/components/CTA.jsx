@@ -9,11 +9,11 @@ export default function CTA() {
       
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-          Ready to Build Something Amazing?
+          Got a Project Idea?
         </h2>
         <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
-          Join the community of innovators, entrepreneurs, and tech enthusiasts 
-          creating impactful solutions with TrybeNode.
+          Whether it's AgriTech, IoT, PropTech, or any innovative solution—bring us your vision 
+          and the right information, and we'll make it happen.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

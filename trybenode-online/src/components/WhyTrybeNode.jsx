@@ -7,18 +7,18 @@ export default function WhyTrybeNode() {
     },
     {
       icon: "🎯",
-      title: "User-Centered",
-      description: "Every product we build is designed with your users in mind—intuitive and easy to use."
+      title: "Industry Versatile",
+      description: "From AgriTech to IoT, PropTech to custom solutions—we adapt to any industry."
     },
     {
       icon: "🚀",
       title: "Innovation-Driven",
-      description: "We stay ahead of the curve, using modern technologies to solve today's problems."
+      description: "We leverage modern technologies and proven methodologies to solve complex problems."
     },
     {
       icon: "🤝",
-      title: "Community-Focused",
-      description: "A growing network of creators and builders, connected through technology and collaboration."
+      title: "Expert Team",
+      description: "Access the right expertise and insights for your project—regardless of industry."
     }
   ];
 

@@ -24,8 +24,8 @@ export default function Navigation() {
               src="/logo.png" 
               alt="TrybeNode" 
               width={180} 
-              height={50}
-              className="w-auto h-10"
+              height={80}
+              className="w-auto max-h-20"
               priority
             />
           </Link>
