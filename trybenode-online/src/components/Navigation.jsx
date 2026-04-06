@@ -26,7 +26,7 @@ export default function Navigation() {
               width={240} 
               height={70}
               className="h-14 w-auto"
-              style={{ width: "auto", height: "auto", maxHeight: "3.5rem" }}
+              style={{ width: "auto", height: "auto", maxHeight: "5rem" }}
               priority
             />
           </Link>
