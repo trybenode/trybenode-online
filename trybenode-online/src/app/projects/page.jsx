@@ -13,15 +13,16 @@ export default function Projects() {
         "Real-time in-app messaging system",
         "Advanced search and category filtering",
         "User profiles and ratings",
-        "Mobile-responsive design for on-the-go access"
+        "Mobile-responsive design for on-the-go access",
+        "Mobile and web accessibility for all students"
       ],
-      technologies: ["Next.js", "Node.js", "MongoDB", "Socket.io", "Tailwind CSS"],
+      technologies: ["Next.js", "Node.js", "Firebase", "Tailwind CSS"],
       images: [
         null, // Replace with "/trybemarket-1.jpg" when you add the image
         null, // Replace with "/trybemarket-2.jpg"
         null  // Replace with "/trybemarket-3.jpg"
       ],
-      link: "" // Add the live URL when available
+      link: "https://trybemarket.online" // Add the live URL when available
     }
     // Add more projects here when available
   ];

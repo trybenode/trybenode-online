@@ -12,29 +12,93 @@ export default function ProjectCard({
 }) {
   return (
     <div className={`grid lg:grid-cols-2 gap-12 items-center ${reverse ? 'lg:flex-row-reverse' : ''}`}>
-      {/* Images Section */}
+      {/* Images Section - Portrait Phone Screenshots */}
       <div className={`${reverse ? 'lg:order-2' : 'lg:order-1'}`}>
-        <div className="grid grid-cols-2 gap-4">
+        {/* Mobile & Tablet: Subtle overlapping cards (middle one on top) */}
+        <div className="flex justify-center lg:hidden mb-8">
+          <div className="relative flex items-center justify-center gap-3">
+            {/* First two images side by side in background */}
+            {images.slice(0, 2).map((image, index) => (
+              <div 
+                key={index} 
+                className="relative rounded-2xl overflow-hidden shadow-xl"
+                style={{ 
+                  width: '130px', 
+                  height: '280px',
+                }}
+              >
+                {image ? (
+                  <Image
+                    src={image}
+                    alt={`${title} screenshot ${index + 1}`}
+                    fill
+                    className="object-cover"
+                    sizes="130px"
+                  />
+                ) : (
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#725eed]/20 to-[#fbeb78]/20 flex items-center justify-center border-4 border-gray-800 rounded-2xl">
+                    <div className="text-center">
+                      <span className="text-2xl">📱</span>
+                      <p className="text-gray-600 text-xs mt-1">{index + 1}</p>
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
+            
+            {/* Third image overlapping on top center (elevated) */}
+            {images[2] !== undefined && (
+              <div 
+                className="absolute rounded-2xl overflow-hidden shadow-2xl border-2 border-white"
+                style={{ 
+                  width: '130px', 
+                  height: '280px',
+                  top: '-30px',
+                  zIndex: 10
+                }}
+              >
+                {images[2] ? (
+                  <Image
+                    src={images[2]}
+                    alt={`${title} screenshot 3`}
+                    fill
+                    className="object-cover"
+                    sizes="130px"
+                  />
+                ) : (
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#725eed]/20 to-[#fbeb78]/20 flex items-center justify-center border-4 border-gray-800 rounded-2xl">
+                    <div className="text-center">
+                      <span className="text-2xl">📱</span>
+                      <p className="text-gray-600 text-xs mt-1">3</p>
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Desktop: Side by side */}
+        <div className="hidden lg:flex gap-4 justify-center items-start">
           {images.map((image, index) => (
             <div 
               key={index} 
-              className={`relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow ${
-                index === 0 ? 'col-span-2 h-80' : 'h-64'
-              }`}
+              className="relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex-shrink-0"
+              style={{ width: '180px', height: '380px' }}
             >
               {image ? (
                 <Image
                   src={image}
                   alt={`${title} screenshot ${index + 1}`}
                   fill
-                  className="object-cover hover:scale-105 transition-transform duration-300"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                  sizes="180px"
                 />
               ) : (
-                <div className="absolute inset-0 bg-gradient-to-br from-[#725eed]/20 to-[#fbeb78]/20 flex items-center justify-center">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#725eed]/20 to-[#fbeb78]/20 flex items-center justify-center border-8 border-gray-800 rounded-2xl">
                   <div className="text-center">
-                    <span className="text-6xl">🖼️</span>
-                    <p className="text-gray-600 mt-2">Project Image {index + 1}</p>
+                    <span className="text-4xl">📱</span>
+                    <p className="text-gray-600 text-xs mt-2 px-2">Screenshot {index + 1}</p>
                   </div>
                 </div>
               )}
