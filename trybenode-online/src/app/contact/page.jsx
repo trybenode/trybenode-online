@@ -171,8 +171,8 @@ export default function Contact() {
                   <div>
                     <h3 className="text-xl font-bold mb-2">Email Us</h3>
                     <p className="text-gray-600 mb-1">Our team is here to help</p>
-                    <a href="mailto:info@trybenode.com" className="text-[#725eed] font-semibold hover:underline text-lg">
-                      info@trybenode.com
+                    <a href="mailto:contact@trybenode.online" className="text-[#725eed] font-semibold hover:underline text-lg">
+                      contact@trybenode.online
                     </a>
                   </div>
                 </div>
@@ -187,8 +187,8 @@ export default function Contact() {
                   <div>
                     <h3 className="text-xl font-bold mb-2">Call Us</h3>
                     <p className="text-gray-600 mb-1">24/7 Support Available</p>
-                    <a href="tel:+2341234567890" className="text-[#725eed] font-semibold hover:underline text-lg">
-                      +234 123 456 7890
+                    <a href="tel:+2348101502547" className="text-[#725eed] font-semibold hover:underline text-lg">
+                      +234 810 150 2547
                     </a>
                   </div>
                 </div>
