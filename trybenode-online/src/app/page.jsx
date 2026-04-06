@@ -1,10 +1,21 @@
-import Image from "next/image";
+import Navigation from "@/components/Navigation";
+import Hero from "@/components/Hero";
+import WhyTrybeNode from "@/components/WhyTrybeNode";
+import Services from "@/components/Services";
+import CTA from "@/components/CTA";
+import Footer from "@/components/Footer";
 
 export default function HomePage() {
   return (
-    <div>
-      <h1>Welcome to TrybeNode</h1>
-      <p>This is the home page of TrybeNode.</p>
-    </div>
+    <>
+      <Navigation />
+      <main>
+        <Hero />
+        <WhyTrybeNode />
+        <Services />
+        <CTA />
+      </main>
+      <Footer />
+    </>
   );
 }

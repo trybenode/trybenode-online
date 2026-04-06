@@ -1,4 +1,5 @@
 import { Outfit, Inter } from "next/font/google";
+import "./globals.css";
 
 const outfit = Outfit({
   variable: "--font-outfit",
