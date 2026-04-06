@@ -4,25 +4,25 @@ import Image from "next/image";
 export default function Services() {
   const services = [
     {
-      title: "AgriTech Solutions",
-      description: "Smart farming platforms, supply chain management, and agricultural data analytics.",
-      features: ["Farm Management", "IoT Sensors", "Market Platforms"],
+      title: "E-Commerce Platforms",
+      description: "Full-featured online stores, payment integration, inventory management, and seamless shopping experiences.",
+      features: ["Custom Storefronts", "Payment Gateways", "Order Management"],
       color: "#725eed",
-      image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=400&q=80"
+      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&q=80"
     },
     {
-      title: "IoT & Smart Systems",
-      description: "Connected devices, automation systems, and real-time monitoring solutions.",
-      features: ["Device Integration", "Real-time Analytics", "Automation"],
+      title: "Automated Systems",
+      description: "Workflow automation, business process optimization, and intelligent systems that save time and resources.",
+      features: ["Process Automation", "Smart Workflows", "System Integration"],
       color: "#2d236d",
-      image: "https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?w=400&q=80"
+      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&q=80"
     },
     {
-      title: "PropTech & More",
-      description: "Property management, real estate platforms, and industry-specific digital solutions.",
-      features: ["Property Platforms", "Management Systems", "Custom Solutions"],
+      title: "IoT, PropTech & AgriTech",
+      description: "Connected devices, property management platforms, agricultural tech, and industry-specific solutions.",
+      features: ["IoT Integration", "Property Platforms", "AgriTech Solutions"],
       color: "#fbeb78",
-      image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&q=80"
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80"
     }
   ];
 
@@ -34,8 +34,8 @@ export default function Services() {
             What We <span className="text-[#725eed]">Build</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            From concept to deployment, we create digital solutions 
-            that make a real impact.
+            From e-commerce platforms to automated systems and beyond—we create 
+            digital solutions that drive real business impact.
           </p>
         </div>
 

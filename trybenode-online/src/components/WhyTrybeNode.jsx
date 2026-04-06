@@ -8,7 +8,7 @@ export default function WhyTrybeNode() {
     {
       icon: "🎯",
       title: "Industry Versatile",
-      description: "From AgriTech to IoT, PropTech to custom solutions—we adapt to any industry."
+      description: "E-commerce, automated systems, IoT, PropTech, AgriTech—we adapt to any industry."
     },
     {
       icon: "🚀",

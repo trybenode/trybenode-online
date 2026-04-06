@@ -12,8 +12,8 @@ export default function CTA() {
           Got a Project Idea?
         </h2>
         <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
-          Whether it's AgriTech, IoT, PropTech, or any innovative solution—bring us your vision 
-          and the right information, and we'll make it happen.
+          Whether it's an e-commerce platform, automated systems, IoT, PropTech, AgriTech, 
+          or any innovative solution—bring us your vision and the right information, and we'll make it happen.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

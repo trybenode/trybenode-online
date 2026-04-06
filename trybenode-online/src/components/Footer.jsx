@@ -16,7 +16,8 @@ export default function Footer() {
                 alt="TrybeNode" 
                 width={200} 
                 height={60}
-                className="w-auto h-16 brightness-0 invert"
+                className="h-20 w-auto brightness-0 invert"
+                style={{ width: "auto", height: "auto", maxHeight: "4rem" }}
               />
             </div>
             <p className="text-gray-400 mb-6 max-w-md">
