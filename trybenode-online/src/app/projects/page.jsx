@@ -1,6 +1,35 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ProjectCard from "@/components/ProjectCard";
+import JsonLd, { trybeMarketSchema } from "@/components/JsonLd";
+
+export const metadata = {
+  title: "TrybeNode Projects - Our Portfolio | TrybeMarket & Custom Solutions",
+  description: "Explore TrybeNode's featured projects including TrybeMarket, a student marketplace platform with in-app messaging. See how we build scalable e-commerce and custom software solutions.",
+  keywords: "TrybeNode portfolio, TrybeMarket, student marketplace app, e-commerce projects Nigeria, mobile app development, software projects, TrybeNode case studies",
+  openGraph: {
+    type: "website",
+    locale: "en_NG",
+    url: "https://trybenode.online/projects",
+    siteName: "TrybeNode",
+    title: "TrybeNode Projects - Our Portfolio",
+    description: "Discover our innovative projects including TrybeMarket, a student marketplace revolutionizing campus commerce.",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80",
+        width: 1200,
+        height: 630,
+        alt: "TrybeNode Projects Portfolio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "TrybeNode Projects - Our Portfolio",
+    description: "Explore our featured projects including TrybeMarket student marketplace and custom software solutions.",
+    images: ["https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80"],
+  },
+};
 
 export default function Projects() {
   const projects = [
@@ -29,6 +58,7 @@ export default function Projects() {
 
   return (
     <>
+      <JsonLd data={trybeMarketSchema} />
       <Navigation />
       <main>
         {/* Hero Section */}

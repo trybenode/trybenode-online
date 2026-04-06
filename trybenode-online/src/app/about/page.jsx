@@ -3,6 +3,35 @@ import Footer from "@/components/Footer";
 import Testimonial from "@/components/Testimonial";
 import Image from "next/image";
 import Link from "next/link";
+import JsonLd, { organizationSchema } from "@/components/JsonLd";
+
+export const metadata = {
+  title: "About TrybeNode - Meet Our Expert Team | Full Stack & Cybersecurity Specialists",
+  description: "Learn about TrybeNode's mission to deliver innovative digital solutions. Meet our founders: Allen, Full Stack Developer, and Abdulhaq, Cyber Security Expert. Registered at Leadcity University, Ibadan.",
+  keywords: "TrybeNode team, software development company Nigeria, full stack developer, cybersecurity expert, Leadcity University Ibadan, tech startup Nigeria, about TrybeNode",
+  openGraph: {
+    type: "website",
+    locale: "en_NG",
+    url: "https://trybenode.online/about",
+    siteName: "TrybeNode",
+    title: "About TrybeNode - Meet Our Expert Team",
+    description: "Discover TrybeNode's story and meet the expert team behind innovative digital solutions in Nigeria.",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80",
+        width: 1200,
+        height: 630,
+        alt: "TrybeNode Team",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About TrybeNode - Meet Our Expert Team",
+    description: "Learn about TrybeNode's mission and meet our founders specializing in full stack development and cybersecurity.",
+    images: ["https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80"],
+  },
+};
 
 export default function About() {
   const founders = [
@@ -24,6 +53,7 @@ export default function About() {
 
   return (
     <>
+      <JsonLd data={organizationSchema} />
       <Navigation />
       <main>
         {/* Hero Section */}
