@@ -44,16 +44,16 @@ export default function Hero() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6 mt-16 pt-8 border-t border-gray-200">
               <div>
-                <div className="text-4xl font-bold text-[#725eed] mb-2">50+</div>
-                <div className="text-sm text-gray-600 uppercase tracking-wide">Projects</div>
+                <div className="text-4xl font-bold text-[#725eed] mb-2">✓</div>
+                <div className="text-sm text-gray-600 uppercase tracking-wide">Registered Company</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-[#725eed] mb-2">10+</div>
-                <div className="text-sm text-gray-600 uppercase tracking-wide">Industries</div>
+                <div className="text-4xl font-bold text-[#725eed] mb-2">∞</div>
+                <div className="text-sm text-gray-600 uppercase tracking-wide">Scalable Systems</div>
               </div>
               <div>
                 <div className="text-4xl font-bold text-[#725eed] mb-2">24/7</div>
-                <div className="text-sm text-gray-600 uppercase tracking-wide">Support</div>
+                <div className="text-sm text-gray-600 uppercase tracking-wide">Active Support</div>
               </div>
             </div>
           </div>
