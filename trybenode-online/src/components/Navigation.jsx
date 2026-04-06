@@ -23,10 +23,10 @@ export default function Navigation() {
             <Image 
               src="/logo.png" 
               alt="TrybeNode" 
-              width={180} 
-              height={50}
-              className="h-10 w-auto"
-              style={{ width: "auto", height: "auto", maxHeight: "2.5rem" }}
+              width={240} 
+              height={70}
+              className="h-14 w-auto"
+              style={{ width: "auto", height: "auto", maxHeight: "3.5rem" }}
               priority
             />
           </Link>
@@ -42,12 +42,6 @@ export default function Navigation() {
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="/contact"
-              className="px-6 py-2.5 bg-[#725eed] text-white font-semibold rounded-lg hover:bg-[#2d236d] transition-all duration-300 shadow-md hover:shadow-lg"
-            >
-              Get Started
-            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -82,13 +76,6 @@ export default function Navigation() {
                   {link.label}
                 </Link>
               ))}
-              <Link
-                href="/contact"
-                onClick={() => setMobileMenuOpen(false)}
-                className="px-6 py-2.5 bg-[#725eed] text-white font-semibold rounded-lg hover:bg-[#2d236d] transition-all text-center"
-              >
-                Get Started
-              </Link>
             </div>
           </div>
         )}
