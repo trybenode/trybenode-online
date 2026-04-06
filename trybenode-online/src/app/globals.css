@@ -1,3 +1,17 @@
 @import "tailwindcss";
 
+:root {
+  --yellow-primary: #fbeb78;
+  --purple-primary: #725eed;
+  --purple-dark: #2d236d;
+  --gray-900: #0f0f0f;
+  --gray-800: #1a1a1a;
+  --gray-700: #2a2a2a;
+}
+
+body {
+  background-color: white;
+  color: var(--gray-900);
+}
+
 
