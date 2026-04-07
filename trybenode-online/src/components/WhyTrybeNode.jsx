@@ -27,9 +27,9 @@ export default function WhyTrybeNode() {
   return (
     <section className="py-20 sm:py-28 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left - Overlapping Images */}
-          <div className="hidden lg:block relative h-[600px]">
+          <div className="block relative h-[600px]">
             {/* Background Image */}
             <div className="absolute top-0 left-0 w-[85%] h-[70%] rounded-2xl overflow-hidden shadow-2xl">
               <Image
@@ -38,6 +38,7 @@ export default function WhyTrybeNode() {
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 600px"
+                loading="eager"
               />
             </div>
             
@@ -49,6 +50,7 @@ export default function WhyTrybeNode() {
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 600px"
+                loading="eager"
               />
             </div>
 
