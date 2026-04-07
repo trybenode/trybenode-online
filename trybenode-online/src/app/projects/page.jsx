@@ -40,16 +40,16 @@ export default function Projects() {
         "Student verification and authentication",
         "Products and services listing marketplace",
         "Real-time in-app messaging system",
+        "Mobile and web accessibility for all students",
         "Advanced search and category filtering",
         "User profiles and ratings",
         "Mobile-responsive design for on-the-go access",
-        "Mobile and web accessibility for all students"
       ],
       technologies: ["Next.js", "Node.js", "Firebase", "Tailwind CSS"],
       images: [
-        null, // Replace with "/trybemarket-1.jpg" when you add the image
-        null, // Replace with "/trybemarket-2.jpg"
-        null  // Replace with "/trybemarket-3.jpg"
+        "/trybemarket-1.jpeg", // Replace with "/trybemarket-1.jpg" when you add the image
+        "/trybemarket-2.jpeg", // Replace with "/trybemarket-2.jpg"
+        "/trybemarket-3.jpeg"  // Replace with "/trybemarket-3.jpg"
       ],
       link: "https://trybemarket.online" // Add the live URL when available
     }
@@ -128,3 +128,5 @@ export default function Projects() {
     </>
   );
 }
+
+
