@@ -11,6 +11,12 @@ export default function ContactForm() {
     message: ''
   });
 
+  const [status, setStatus] = useState({
+    submitting: false,
+    submitted: false,
+    error: null
+  });
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -18,11 +24,47 @@ export default function ContactForm() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    // You can add your form submission logic here
+    setStatus({ submitting: true, submitted: false, error: null });
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message');
+      }
+
+      setStatus({ submitting: false, submitted: true, error: null });
+      
+      // Reset form after 3 seconds
+      setTimeout(() => {
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: ''
+        });
+        setStatus({ submitting: false, submitted: false, error: null });
+      }, 5000);
+
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setStatus({ 
+        submitting: false, 
+        submitted: false, 
+        error: error.message || 'Something went wrong. Please try again.' 
+      });
+    }
   };
 
   return (
@@ -36,6 +78,34 @@ export default function ContactForm() {
             Fill out the form below and we'll get back to you within 24 hours.
           </p>
         </div>
+
+        {status.submitted && (
+          <div className="mb-8 p-6 bg-green-50 border-2 border-green-500 rounded-lg">
+            <div className="flex items-center gap-3">
+              <svg className="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <div>
+                <h3 className="text-lg font-semibold text-green-800">Message Sent Successfully!</h3>
+                <p className="text-sm text-green-700 mt-1">Thank you for reaching out. We'll get back to you within 24 hours.</p>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {status.error && (
+          <div className="mb-8 p-6 bg-red-50 border-2 border-red-500 rounded-lg">
+            <div className="flex items-center gap-3">
+              <svg className="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <div>
+                <h3 className="text-lg font-semibold text-red-800">Error</h3>
+                <p className="text-sm text-red-700 mt-1">{status.error}</p>
+              </div>
+            </div>
+          </div>
+        )}
 
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
@@ -121,8 +191,17 @@ export default function ContactForm() {
 
           <button
             type="submit"
-            className="w-full px-6 py-3 sm:px-8 sm:py-4 bg-[#2d236d] text-white text-sm sm:text-base font-semibold rounded-lg hover:bg-[#725eed] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
-            Send Message
+            disabled={status.submitting}
+            className="w-full px-6 py-3 sm:px-8 sm:py-4 bg-[#2d236d] text-white text-sm sm:text-base font-semibold rounded-lg hover:bg-[#725eed] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:transform-none flex items-center justify-center gap-2">
+            {status.submitting ? (
+              <>
+                <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                Sending...
+              </>
+            ) : 'Send Message'}
           </button>
         </form>
       </div>
