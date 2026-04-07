@@ -244,7 +244,7 @@ export default function Contact() {
             </p>
             <div className="flex justify-center gap-4">
               <a
-                href="#"
+                href="https://twitter.com/trybenode"
                 className="w-12 h-12 sm:w-14 sm:h-14 bg-[#2d236d] text-white rounded-full flex items-center justify-center hover:bg-[#725eed] transition-all duration-300 hover:scale-110"
                 aria-label="Twitter"
               >
@@ -290,7 +290,7 @@ export default function Contact() {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://github.com/trybenode"
                 className="w-12 h-12 sm:w-14 sm:h-14 bg-[#2d236d] text-white rounded-full flex items-center justify-center hover:bg-[#725eed] transition-all duration-300 hover:scale-110"
                 aria-label="GitHub"
               >
@@ -303,7 +303,7 @@ export default function Contact() {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://www.tiktok.com/@trybenode.space"
                 className="w-12 h-12 sm:w-14 sm:h-14 bg-[#2d236d] text-white rounded-full flex items-center justify-center hover:bg-[#725eed] transition-all duration-300 hover:scale-110"
                 aria-label="TikTok"
               >
