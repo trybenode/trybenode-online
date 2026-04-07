@@ -12,12 +12,12 @@ export default function Footer() {
           <div className="md:col-span-2">
             <div className="mb-4">
               <Image 
-                src="/logo.png" 
+                src="/logo-white.png" 
                 alt="TrybeNode" 
                 width={200} 
                 height={60}
-                className="h-20 w-auto brightness-0 invert"
-                style={{ width: "auto", height: "auto", maxHeight: "4rem" }}
+                className="h-40 w-auto"
+                style={{ width: "auto", height: "auto", maxHeight: "6rem" }}
               />
             </div>
             <p className="text-gray-400 mb-6 max-w-md">
