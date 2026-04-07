@@ -161,81 +161,74 @@ export async function POST(request) {
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Thank You</title>
           </head>
-          <body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #f8f9fa;">
-            <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #f8f9fa; padding: 40px 20px;">
+          <body style="margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f5f5f5;">
+            <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #f5f5f5; padding: 40px 20px;">
               <tr>
                 <td align="center">
-                  <table width="600" cellpadding="0" cellspacing="0" style="background-color: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
-                    <!-- Header with Logo -->
+                  <table width="600" cellpadding="0" cellspacing="0" style="background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    <!-- Header -->
                     <tr>
-                      <td style="background: linear-gradient(135deg, #2d236d 0%, #725eed 100%); padding: 50px 40px; text-align: center; position: relative;">
-                        <img src="https://trybenode.online/logo.png" alt="TrybeNode" style="height: 50px; width: auto; margin-bottom: 20px; display: inline-block;" />
-                        <h1 style="margin: 0; color: #fbeb78; font-size: 36px; font-weight: 700; letter-spacing: -0.5px;">Thank You! 🎉</h1>
-                        <p style="margin: 15px 0 0; color: rgba(255, 255, 255, 0.95); font-size: 18px; font-weight: 500;">We've received your message</p>
+                      <td style="background: linear-gradient(135deg, #2d236d 0%, #725eed 100%); padding: 40px 30px; text-align: center;">
+                        <img src="https://trybenode.online/logo.png" alt="TrybeNode" style="height: 45px; width: auto; margin-bottom: 15px; display: inline-block;" />
+                        <h1 style="margin: 0; color: #fbeb78; font-size: 28px; font-weight: bold;">Thank You! 🎉</h1>
+                        <p style="margin: 10px 0 0; color: #ffffff; font-size: 16px; opacity: 0.9;">We've received your message</p>
                       </td>
                     </tr>
                     
                     <!-- Content -->
                     <tr>
-                      <td style="padding: 50px 40px;">
-                        <p style="margin: 0 0 25px; color: #2d236d; font-size: 22px; font-weight: 700;">Hi ${name.split(' ')[0]},</p>
+                      <td style="padding: 40px 30px;">
+                        <p style="margin: 0 0 20px; color: #333; font-size: 18px; font-weight: 600;">Hi ${name.split(' ')[0]}, 👋</p>
                         
-                        <p style="margin: 0 0 20px; color: #555; font-size: 16px; line-height: 1.8;">
+                        <p style="margin: 0 0 20px; color: #666; font-size: 16px; line-height: 1.6;">
                           Thank you for reaching out to <strong style="color: #725eed;">TrybeNode</strong>! 🚀 We've received your message and our team will get back to you within <strong>24 hours</strong>.
                         </p>
                         
-                        <p style="margin: 0 0 35px; color: #666; font-size: 16px; line-height: 1.8;">
-                          In the meantime, feel free to explore our website to learn more about our services and innovative projects.
+                        <p style="margin: 0 0 30px; color: #666; font-size: 16px; line-height: 1.6;">
+                          In the meantime, feel free to explore our website to learn more about our services and projects. 💡
                         </p>
                         
                         <!-- Summary Box -->
-                        <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 35px;">
+                        <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 30px; background-color: #f8f9fa; border-radius: 6px; overflow: hidden;">
                           <tr>
-                            <td style="padding: 28px; background: linear-gradient(135deg, #f8f9fa 0%, #fafbfc 100%); border-radius: 10px; border-left: 4px solid #fbeb78; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-                              <p style="margin: 0 0 18px; color: #999; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600;">📝 Your Message Summary</p>
-                              <p style="margin: 0 0 12px; color: #2d236d; font-size: 17px; font-weight: 700;">Subject: ${subject}</p>
-                              <p style="margin: 0; color: #666; font-size: 15px; line-height: 1.7;">We'll respond to your inquiry about <strong>"${subject}"</strong> as soon as possible. Our team is excited to help you!</p>
+                            <td style="padding: 20px;">
+                              <p style="margin: 0 0 15px; color: #999; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px;">📝 Your Message Summary</p>
+                              <p style="margin: 0 0 10px; color: #333; font-size: 15px;"><strong>Subject:</strong> ${subject}</p>
+                              <p style="margin: 0; color: #666; font-size: 14px; line-height: 1.6;">We'll respond to your inquiry about "${subject}" as soon as possible. ⚡</p>
                             </td>
                           </tr>
                         </table>
                         
                         <!-- CTA Button -->
-                        <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 30px;">
+                        <table width="100%" cellpadding="0" cellspacing="0">
                           <tr>
-                            <td align="center" style="padding: 10px 0;">
-                              <a href="https://trybenode.online" style="display: inline-block; padding: 18px 50px; background: linear-gradient(135deg, #725eed 0%, #2d236d 100%); color: #ffffff; text-decoration: none; border-radius: 8px; font-weight: 700; font-size: 16px; box-shadow: 0 4px 12px rgba(114, 94, 237, 0.3);">
-                                🌐 Visit Our Website
-                              </a>
+                            <td align="center" style="padding: 20px 0;">
+                              <a href="https://trybenode.online" style="display: inline-block; padding: 14px 40px; background-color: #725eed; color: #ffffff; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 16px;">🌐 Visit Our Website</a>
                             </td>
                           </tr>
                         </table>
                         
-                        <div style="margin: 35px 0 0; padding: 25px; background: linear-gradient(135deg, #fbeb78 0%, #fef5c7 100%); border-radius: 8px; border-left: 4px solid #2d236d;">
-                          <p style="margin: 0 0 8px; color: #2d236d; font-size: 15px; line-height: 1.7;">
-                            Best regards,<br>
-                            <strong style="font-size: 17px; color: #725eed;">The TrybeNode Team</strong> 💜
-                          </p>
-                        </div>
+                        <p style="margin: 30px 0 0; color: #666; font-size: 14px; line-height: 1.6;">
+                          Best regards,<br>
+                          <strong style="color: #725eed;">The TrybeNode Team</strong> 💜
+                        </p>
                       </td>
                     </tr>
                     
                     <!-- Footer -->
                     <tr>
-                      <td style="padding: 40px; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); text-align: center; border-top: 1px solid #e8e8e8;">
-                        <p style="margin: 0 0 18px; color: #2d236d; font-size: 15px; font-weight: 700;">
-                          📞 Contact Us
+                      <td style="padding: 30px; background-color: #f8f9fa; text-align: center; border-top: 1px solid #e0e0e0;">
+                        <p style="margin: 0 0 15px; color: #666; font-size: 14px;">
+                          <strong>📞 Contact Us</strong>
                         </p>
-                        <p style="margin: 0 0 8px; color: #666; font-size: 14px; line-height: 1.6;">
-                          📧 <a href="mailto:contact@trybenode.online" style="color: #725eed; text-decoration: none; font-weight: 600;">contact@trybenode.online</a> 
-                          <span style="color: #ddd; margin: 0 8px;">|</span> 
-                          📱 <a href="tel:+2348101502547" style="color: #725eed; text-decoration: none; font-weight: 600;">+234 810 150 2547</a>
+                        <p style="margin: 0 0 5px; color: #999; font-size: 13px;">
+                          📧 contact@trybenode.online | 📱 +234 810 150 2547
                         </p>
-                        <p style="margin: 0 0 20px; color: #999; font-size: 13px;">
+                        <p style="margin: 0 0 15px; color: #999; font-size: 13px;">
                           📍 Leadcity University, Ibadan, Nigeria
                         </p>
-                        <div style="margin: 20px 0; height: 1px; background: linear-gradient(90deg, transparent, #e8e8e8, transparent);"></div>
-                        <p style="margin: 0; color: #bbb; font-size: 12px;">
-                          © ${new Date().getFullYear()} <strong style="color: #725eed;">TrybeNode</strong> · All rights reserved.
+                        <p style="margin: 0; color: #999; font-size: 12px;">
+                          © ${new Date().getFullYear()} TrybeNode. All rights reserved.
                         </p>
                       </td>
                     </tr>
