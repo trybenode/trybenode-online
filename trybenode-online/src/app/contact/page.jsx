@@ -257,7 +257,7 @@ export default function Contact() {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/trybenode/"
                 className="w-12 h-12 sm:w-14 sm:h-14 bg-[#2d236d] text-white rounded-full flex items-center justify-center hover:bg-[#725eed] transition-all duration-300 hover:scale-110"
                 aria-label="LinkedIn"
               >
@@ -271,7 +271,7 @@ export default function Contact() {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/trybe.node.space/"
                 className="w-12 h-12 sm:w-14 sm:h-14 bg-[#2d236d] text-white rounded-full flex items-center justify-center hover:bg-[#725eed] transition-all duration-300 hover:scale-110"
                 aria-label="Instagram"
               >
