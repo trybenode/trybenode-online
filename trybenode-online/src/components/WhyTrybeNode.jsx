@@ -1,91 +1,108 @@
 import Image from "next/image";
+import Reveal from "@/components/Reveal";
+
+const steps = [
+  {
+    number: "01",
+    title: "Build",
+    description:
+      "We design and ship the product ourselves, end to end. No outsourcing, no handoffs.",
+    icon: (
+      <path strokeLinecap="round" strokeLinejoin="round" d="M9 8l-4 4 4 4m6-8l4 4-4 4M13 6l-2 12" />
+    ),
+  },
+  {
+    number: "02",
+    title: "Validate",
+    description:
+      "Every product proves itself with real users before it earns more investment or attention.",
+    icon: (
+      <path strokeLinecap="round" strokeLinejoin="round" d="M4 18l5-5 3 3 8-8M20 8v6M20 8h-6" />
+    ),
+  },
+  {
+    number: "03",
+    title: "Spin out",
+    description:
+      "The strongest ideas graduate into their own company, with their own team and roadmap. TrybeMarket is here now.",
+    icon: (
+      <path strokeLinecap="round" strokeLinejoin="round" d="M6 4v9a3 3 0 003 3h6m0 0l-3-3m3 3l-3 3M6 4a2 2 0 100 4 2 2 0 000-4z" />
+    ),
+  },
+];
 
 export default function WhyTrybeNode() {
-  const values = [
-    {
-      icon: "⚡",
-      title: "Fast & Efficient",
-      description: "We deliver clean, reliable systems on time without overcomplicating solutions."
-    },
-    {
-      icon: "🎯",
-      title: "Industry Versatile",
-      description: "E-commerce, automated systems, IoT, PropTech, AgriTech—we adapt to any industry."
-    },
-    {
-      icon: "🚀",
-      title: "Innovation-Driven",
-      description: "We leverage modern technologies and proven methodologies to solve complex problems."
-    },
-    {
-      icon: "🤝",
-      title: "Expert Team",
-      description: "Access the right expertise and insights for your project—regardless of industry."
-    }
-  ];
-
   return (
     <section className="py-20 sm:py-28 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* Left - Overlapping Images */}
-          <div className="block relative h-[600px]">
-            {/* Background Image */}
-            <div className="absolute top-0 left-0 w-[85%] h-[70%] rounded-2xl overflow-hidden shadow-2xl">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+          {/* Left — TrybeMarket screenshots */}
+          <Reveal className="relative h-105 sm:h-130 mx-auto w-full max-w-sm lg:max-w-none">
+            <div className="absolute left-0 top-2 w-[56%] aspect-499/1080 rounded-4xl overflow-hidden border-4 border-white shadow-xl -rotate-6">
               <Image
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80"
-                alt="Team collaboration"
+                src="/trybemarket-2.jpeg"
+                alt="TrybeMarket product screen"
                 fill
                 className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 600px"
-                loading="eager"
+                sizes="(max-width: 1024px) 40vw, 280px"
               />
             </div>
-            
-            {/* Foreground Image */}
-            <div className="absolute bottom-0 right-0 w-[75%] h-[60%] rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+            <div className="absolute right-0 bottom-2 w-[58%] aspect-499/1080 rounded-4xl overflow-hidden border-4 border-white shadow-2xl rotate-3">
               <Image
-                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&q=80"
-                alt="Professional workspace"
+                src="/trybemarket-1.jpeg"
+                alt="TrybeMarket app screen"
                 fill
                 className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 600px"
-                loading="eager"
+                sizes="(max-width: 1024px) 42vw, 300px"
               />
             </div>
 
-            {/* Decorative element */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-[#fbeb78] rounded-full blur-3xl opacity-30 -z-10"></div>
-          </div>
+            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 lg:left-4 lg:translate-x-0 inline-flex items-center gap-2 px-3.5 py-2 bg-white rounded-full shadow-lg border border-gray-100">
+              <span className="w-2 h-2 rounded-full bg-emerald-500" />
+              <span className="text-xs font-semibold text-gray-700 whitespace-nowrap">
+                TrybeMarket — live venture
+              </span>
+            </div>
+          </Reveal>
 
-          {/* Right - Content */}
+          {/* Right — Content */}
           <div>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">
-              Why Choose <span className="text-[#725eed]">TrybeNode?</span>
-            </h2>
-            <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-8 sm:mb-10">
-              We're not just developers—we're problem-solvers committed to creating 
-              impactful digital experiences.
-            </p>
+            <Reveal as="h2" className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">
+              One studio. <span className="text-[#725eed]">Growing ventures.</span>
+            </Reveal>
+            <Reveal
+              as="p"
+              delay={80}
+              className="text-base sm:text-lg text-gray-600 mb-10 sm:mb-12 leading-relaxed"
+            >
+              TrybeNode isn&apos;t an agency taking on client work — it&apos;s a
+              studio that builds its own products. TrybeMarket, our student
+              marketplace, is proof the model works.
+            </Reveal>
 
-            <div className="space-y-6">
-              {values.map((value, index) => (
-                <div 
-                  key={index}
-                  className="flex gap-4 group"
-                >
-                  <div className="flex-shrink-0 w-12 h-12 bg-[#725eed]/10 rounded-xl flex items-center justify-center text-2xl group-hover:bg-[#725eed] group-hover:scale-110 transition-all duration-300">
-                    {value.icon}
+            <div className="space-y-8">
+              {steps.map((step, index) => (
+                <Reveal key={step.number} delay={160 + index * 80} className="flex gap-5">
+                  <div className="shrink-0 relative">
+                    <div className="w-11 h-11 rounded-xl bg-white border border-gray-200 flex items-center justify-center text-[#725eed]">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        {step.icon}
+                      </svg>
+                    </div>
+                    {index !== steps.length - 1 && (
+                      <span className="absolute left-1/2 top-11 -translate-x-1/2 w-px h-8 bg-gray-200" />
+                    )}
                   </div>
                   <div>
-                    <h3 className="text-base sm:text-lg font-bold mb-1 sm:mb-2">
-                      {value.title}
-                    </h3>
+                    <div className="flex items-baseline gap-2 mb-1">
+                      <span className="text-xs font-bold text-gray-300">{step.number}</span>
+                      <h3 className="text-base sm:text-lg font-bold">{step.title}</h3>
+                    </div>
                     <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                      {value.description}
+                      {step.description}
                     </p>
                   </div>
-                </div>
+                </Reveal>
               ))}
             </div>
           </div>
