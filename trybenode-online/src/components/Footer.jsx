@@ -20,9 +20,9 @@ export default function Footer() {
                 style={{ width: "auto", height: "auto", maxHeight: "6rem" }}
               />
             </div>
-            <p className="text-gray-400 mb-6 max-w-md">
-              Building simple solutions for real-world problems. A community of innovators 
-              creating impactful digital products.
+            <p className="text-gray-400 mb-6 max-w-md leading-relaxed">
+              A software studio in Ibadan, Nigeria. We build products ourselves,
+              then grow the strongest into independent ventures.
             </p>
             <div className="flex gap-4">
               <a href="https://twitter.com/trybenode" className="w-10 h-10 bg-white/10 hover:bg-[#725eed] rounded-full flex items-center justify-center transition-colors">
@@ -56,7 +56,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-bold text-lg mb-4">Quick Links</h3>
+            <h3 className="font-bold text-sm uppercase tracking-wider text-white/60 mb-4">Explore</h3>
             <ul className="space-y-3">
               <li>
                 <Link href="/" className="text-gray-400 hover:text-[#fbeb78] transition-colors">
@@ -70,7 +70,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/projects" className="text-gray-400 hover:text-[#fbeb78] transition-colors">
-                  Projects
+                  Ventures
                 </Link>
               </li>
               <li>
@@ -81,14 +81,25 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Ventures */}
           <div>
-            <h3 className="font-bold text-lg mb-4">Services</h3>
+            <h3 className="font-bold text-sm uppercase tracking-wider text-white/60 mb-4">Ventures</h3>
             <ul className="space-y-3">
-              <li className="text-gray-400">Web Development</li>
-              <li className="text-gray-400">Mobile Apps</li>
-              <li className="text-gray-400">Digital Infrastructure</li>
-              <li className="text-gray-400">Consulting</li>
+              <li>
+                <a
+                  href="https://trybemarket.online"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-gray-400 hover:text-[#fbeb78] transition-colors"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                  TrybeMarket
+                </a>
+              </li>
+              <li className="inline-flex items-center gap-2 text-gray-600">
+                <span className="w-1.5 h-1.5 rounded-full border border-dashed border-gray-600" />
+                Venture 02
+              </li>
             </ul>
           </div>
         </div>
