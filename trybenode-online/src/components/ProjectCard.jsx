@@ -1,10 +1,27 @@
 import Image from "next/image";
 import Link from "next/link";
+import Reveal from "@/components/Reveal";
 
-export default function ProjectCard({ 
-  title, 
-  description, 
-  features, 
+function ScreenshotPlaceholder({ index, size = "sm" }) {
+  return (
+    <div className="absolute inset-0 bg-gray-50 flex items-center justify-center">
+      <svg
+        className={size === "sm" ? "w-6 h-6 text-gray-300" : "w-8 h-8 text-gray-300"}
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <rect x="6" y="3" width="12" height="18" rx="2" strokeLinecap="round" strokeLinejoin="round" />
+        <path strokeLinecap="round" d="M10 18h4" />
+      </svg>
+    </div>
+  );
+}
+
+export default function ProjectCard({
+  title,
+  description,
+  features,
   technologies,
   images, // Array of image paths
   link,
@@ -13,17 +30,17 @@ export default function ProjectCard({
   return (
     <div className={`grid lg:grid-cols-2 gap-12 items-center ${reverse ? 'lg:flex-row-reverse' : ''}`}>
       {/* Images Section - Portrait Phone Screenshots */}
-      <div className={`${reverse ? 'lg:order-2' : 'lg:order-1'}`}>
+      <Reveal className={`${reverse ? 'lg:order-2' : 'lg:order-1'}`}>
         {/* Mobile & Tablet: Subtle overlapping cards (middle one on top) */}
         <div className="flex justify-center lg:hidden mb-8">
           <div className="relative flex items-center justify-center gap-3">
             {/* First two images side by side in background */}
             {images.slice(0, 2).map((image, index) => (
-              <div 
-                key={index} 
-                className="relative rounded-2xl overflow-hidden shadow-xl"
-                style={{ 
-                  width: '130px', 
+              <div
+                key={index}
+                className="relative rounded-2xl overflow-hidden shadow-xl border-4 border-white"
+                style={{
+                  width: '130px',
                   height: '280px',
                 }}
               >
@@ -36,22 +53,17 @@ export default function ProjectCard({
                     sizes="130px"
                   />
                 ) : (
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#725eed]/20 to-[#fbeb78]/20 flex items-center justify-center border-4 border-gray-800 rounded-2xl">
-                    <div className="text-center">
-                      <span className="text-2xl">📱</span>
-                      <p className="text-gray-600 text-xs mt-1">{index + 1}</p>
-                    </div>
-                  </div>
+                  <ScreenshotPlaceholder index={index} />
                 )}
               </div>
             ))}
-            
+
             {/* Third image overlapping on top center (elevated) */}
             {images[2] !== undefined && (
-              <div 
-                className="absolute rounded-2xl overflow-hidden shadow-2xl border-2 border-white"
-                style={{ 
-                  width: '130px', 
+              <div
+                className="absolute rounded-2xl overflow-hidden shadow-2xl border-4 border-white"
+                style={{
+                  width: '130px',
                   height: '280px',
                   top: '-30px',
                   zIndex: 10
@@ -66,12 +78,7 @@ export default function ProjectCard({
                     sizes="130px"
                   />
                 ) : (
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#725eed]/20 to-[#fbeb78]/20 flex items-center justify-center border-4 border-gray-800 rounded-2xl">
-                    <div className="text-center">
-                      <span className="text-2xl">📱</span>
-                      <p className="text-gray-600 text-xs mt-1">3</p>
-                    </div>
-                  </div>
+                  <ScreenshotPlaceholder index={2} />
                 )}
               </div>
             )}
@@ -81,9 +88,9 @@ export default function ProjectCard({
         {/* Desktop: Side by side */}
         <div className="hidden lg:flex gap-4 justify-center items-start">
           {images.map((image, index) => (
-            <div 
-              key={index} 
-              className="relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex-shrink-0"
+            <div
+              key={index}
+              className="relative rounded-2xl overflow-hidden shadow-xl border-4 border-white hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 shrink-0"
               style={{ width: '180px', height: '380px' }}
             >
               {image ? (
@@ -95,20 +102,15 @@ export default function ProjectCard({
                   sizes="180px"
                 />
               ) : (
-                <div className="absolute inset-0 bg-gradient-to-br from-[#725eed]/20 to-[#fbeb78]/20 flex items-center justify-center border-8 border-gray-800 rounded-2xl">
-                  <div className="text-center">
-                    <span className="text-4xl">📱</span>
-                    <p className="text-gray-600 text-xs mt-2 px-2">Screenshot {index + 1}</p>
-                  </div>
-                </div>
+                <ScreenshotPlaceholder index={index} size="lg" />
               )}
             </div>
           ))}
         </div>
-      </div>
+      </Reveal>
 
       {/* Content Section */}
-      <div className={`${reverse ? 'lg:order-1' : 'lg:order-2'}`}>
+      <Reveal delay={120} className={`${reverse ? 'lg:order-1' : 'lg:order-2'}`}>
         <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">
           {title}
         </h3>
@@ -120,10 +122,12 @@ export default function ProjectCard({
         {features && features.length > 0 && (
           <div className="mb-4 sm:mb-6">
             <h4 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3 text-[#725eed]">Key Features</h4>
-            <ul className="space-y-1 sm:space-y-2">
+            <ul className="space-y-1.5 sm:space-y-2">
               {features.map((feature, index) => (
-                <li key={index} className="flex items-start gap-2 text-sm sm:text-base">
-                  <span className="text-[#fbeb78] mt-1">✦</span>
+                <li key={index} className="flex items-start gap-2.5 text-sm sm:text-base">
+                  <svg className="w-4 h-4 mt-1 text-[#725eed] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                  </svg>
                   <span className="text-gray-700">{feature}</span>
                 </li>
               ))}
@@ -137,9 +141,9 @@ export default function ProjectCard({
             <h4 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3 text-[#725eed]">Technologies Used</h4>
             <div className="flex flex-wrap gap-2">
               {technologies.map((tech, index) => (
-                <span 
-                  key={index} 
-                  className="px-3 py-1.5 sm:px-4 sm:py-2 bg-[#2d236d] text-white rounded-full text-xs sm:text-sm font-medium">
+                <span
+                  key={index}
+                  className="px-3 py-1.5 sm:px-4 sm:py-2 bg-gray-50 border border-gray-200 text-gray-700 rounded-full text-xs sm:text-sm font-medium">
                   {tech}
                 </span>
               ))}
@@ -149,19 +153,19 @@ export default function ProjectCard({
 
         {/* Link */}
         {link && (
-          <Link 
+          <Link
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-2.5 sm:px-6 sm:py-3 bg-[#725eed] text-white text-sm sm:text-base font-semibold rounded-lg hover:bg-[#2d236d] transition-all duration-300 shadow-lg hover:shadow-xl"
+            className="group inline-flex items-center gap-2 px-6 py-3 bg-[#2d236d] text-white text-sm sm:text-base font-semibold rounded-full hover:bg-[#725eed] transition-colors duration-300"
           >
             Visit Project
-            <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
           </Link>
         )}
-      </div>
+      </Reveal>
     </div>
   );
 }
