@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@theme inline {
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-outfit);
+}
+
 @layer base {
   :root {
     --color-yellow-primary: #fbeb78;
@@ -10,4 +15,8 @@
 
 body {
   background-color: white;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
 }
