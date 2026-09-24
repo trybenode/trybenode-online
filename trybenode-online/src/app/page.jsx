@@ -7,9 +7,9 @@ import Footer from "@/components/Footer";
 import JsonLd, { organizationSchema, websiteSchema, serviceSchema } from "@/components/JsonLd";
 
 export const metadata = {
-  title: "TrybeNode - Building Digital Solutions for Modern Businesses | E-commerce & Custom Software Development",
-  description: "TrybeNode delivers cutting-edge e-commerce platforms, automated business systems, and IoT solutions. Based in Ibadan, Nigeria, we build scalable digital products that drive growth for startups and enterprises.",
-  keywords: "e-commerce development, custom software Nigeria, automated business systems, IoT solutions, PropTech, AgriTech, mobile app development, web development Ibadan, TrybeNode",
+  title: "TrybeNode - A Software Studio Building Ventures | TrybeMarket & Custom Software",
+  description: "TrybeNode is a software studio based in Ibadan, Nigeria. We build products in-house and spin the strongest ones into independent ventures — starting with TrybeMarket.",
+  keywords: "software studio Nigeria, startup studio, TrybeMarket, custom software development, e-commerce development, automated business systems, IoT solutions, PropTech, AgriTech, web development Ibadan, TrybeNode",
   authors: [{ name: "TrybeNode" }],
   creator: "TrybeNode",
   publisher: "TrybeNode",
@@ -18,8 +18,8 @@ export const metadata = {
     locale: "en_NG",
     url: "https://trybenode.online",
     siteName: "TrybeNode",
-    title: "TrybeNode - Building Digital Solutions for Modern Businesses",
-    description: "Expert e-commerce development, automated systems, and custom software solutions. Transform your business with TrybeNode's innovative digital products.",
+    title: "TrybeNode - A Software Studio Building Ventures",
+    description: "We build the software, then we build the company. TrybeNode is a software studio in Ibadan, Nigeria — TrybeMarket is our first venture.",
     images: [
       {
         url: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&q=80",
@@ -31,8 +31,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "TrybeNode - Building Digital Solutions for Modern Businesses",
-    description: "Expert e-commerce development, automated systems, and custom software solutions in Nigeria.",
+    title: "TrybeNode - A Software Studio Building Ventures",
+    description: "We build the software, then we build the company. TrybeNode is a software studio in Ibadan, Nigeria.",
     images: ["https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&q=80"],
   },
   robots: {
