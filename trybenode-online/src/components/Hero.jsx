@@ -1,106 +1,107 @@
-import Image from "next/image";
 import Link from "next/link";
+import Reveal from "@/components/Reveal";
+import NodeNetwork from "@/components/NodeNetwork";
+
+const badges = [
+  {
+    label: "Infinitely scalable",
+    icon: (
+      <path strokeLinecap="round" strokeLinejoin="round" d="M4 15l5-5 3 3 6-6m0 0h-4m4 0v4" />
+    ),
+  },
+  {
+    label: "24/7 support",
+    icon: (
+      <>
+        <circle cx="12" cy="12" r="8" strokeLinecap="round" strokeLinejoin="round" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 2" />
+      </>
+    ),
+  },
+  {
+    label: "Registered company",
+    icon: (
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3zM9 12l2 2 4-4" />
+    ),
+  },
+];
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-white pt-16 pb-24 sm:pt-24 sm:pb-32">
-      {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-[#fbeb78] rounded-full blur-3xl opacity-20 -mr-48 -mt-48" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#725eed] rounded-full blur-3xl opacity-10 -ml-48 -mb-48" />
-      
+    <section className="relative overflow-hidden bg-white pt-14 pb-20 sm:pt-20 sm:pb-28">
+      {/* Background */}
+      <div className="absolute inset-0 -z-10 [background-image:radial-gradient(#00000010_1px,transparent_1px)] [background-size:26px_26px] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_0%,black,transparent)]" />
+      <div className="absolute top-0 right-0 w-[28rem] h-[28rem] bg-[#725eed] rounded-full blur-[120px] opacity-[0.07] -mr-40 -mt-40" />
+
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
           <div className="text-center lg:text-left">
-            {/* Headline */}
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 tracking-tight">
-              Technology Solutions
+            <Reveal className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-gray-200 bg-gray-50 mb-6 sm:mb-8">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#725eed] animate-node-pulse" style={{ transformOrigin: "center" }} />
+              <span className="text-xs font-semibold tracking-wide text-gray-600 uppercase">
+                Software studio · Ibadan, Nigeria
+              </span>
+            </Reveal>
+
+            <Reveal
+              as="h1"
+              delay={80}
+              className="text-4xl sm:text-5xl lg:text-[3.4rem] font-bold mb-5 sm:mb-6 tracking-tight leading-[1.08]"
+            >
+              We build the software.
               <br />
-              <span className="text-[#725eed]">For Every Industry</span>
-            </h1>
-            
-            {/* Subheadline */}
-            <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-8 sm:mb-10 leading-relaxed">
-              E-commerce platforms, automated systems, IoT, PropTech, AgriTech—we build 
-              practical digital solutions across industries with the right expertise and insights.
-            </p>
-          
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
-              <Link 
+              <span className="text-[#725eed]">Then we build the company.</span>
+            </Reveal>
+
+            <Reveal
+              as="p"
+              delay={160}
+              className="text-base sm:text-lg text-gray-600 mb-8 sm:mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0"
+            >
+              TrybeNode is a software studio. We design and ship products
+              in-house, then spin the strongest ones into independent
+              ventures — TrybeMarket is the first.
+            </Reveal>
+
+            <Reveal delay={240} className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start items-center">
+              <Link
                 href="/contact"
-                className="px-6 py-3 sm:px-8 sm:py-4 bg-[#2d236d] text-white text-sm sm:text-base font-semibold rounded-lg hover:bg-[#725eed] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[#2d236d] text-white text-sm sm:text-base font-semibold rounded-full hover:bg-[#725eed] transition-colors duration-300"
               >
-                Start Your Project
+                Start a project
+                <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
               </Link>
-              <Link 
+              <Link
                 href="/projects"
-                className="px-6 py-3 sm:px-8 sm:py-4 bg-white text-[#2d236d] text-sm sm:text-base font-semibold rounded-lg border-2 border-[#2d236d] hover:bg-[#fbeb78] hover:border-[#fbeb78] transition-all duration-300">
-              
-                View Projects
+                className="w-full sm:w-auto inline-flex items-center justify-center px-7 py-3.5 bg-white text-[#2d236d] text-sm sm:text-base font-semibold rounded-full border border-gray-200 hover:border-[#2d236d] transition-colors duration-300"
+              >
+                Meet TrybeMarket
               </Link>
-            </div>
-            
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-4 sm:gap-6 mt-12 sm:mt-16 pt-6 sm:pt-8 border-t border-gray-200">
-              <div>
-                <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#725eed] mb-1 sm:mb-2">✓</div>
-                <div className="text-xs sm:text-sm text-gray-600 uppercase tracking-wide">Registered Company</div>
-              </div>
-              <div>
-                <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#725eed] mb-1 sm:mb-2">∞</div>
-                <div className="text-xs sm:text-sm text-gray-600 uppercase tracking-wide">Scalable Systems</div>
-              </div>
-              <div>
-                <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#725eed] mb-1 sm:mb-2">24/7</div>
-                <div className="text-xs sm:text-sm text-gray-600 uppercase tracking-wide">Active Support</div>
-              </div>
-            </div>
+            </Reveal>
+
+            {/* Badges */}
+            <Reveal delay={320} className="flex flex-wrap gap-3 mt-12 sm:mt-14 justify-center lg:justify-start">
+              {badges.map((badge) => (
+                <div
+                  key={badge.label}
+                  className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-gray-50 border border-gray-200 text-gray-700"
+                >
+                  <svg className="w-4 h-4 text-[#725eed]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    {badge.icon}
+                  </svg>
+                  <span className="text-xs sm:text-sm font-medium">{badge.label}</span>
+                </div>
+              ))}
+            </Reveal>
           </div>
 
-          {/* Right - Image Grid */}
-          <div className="hidden lg:grid grid-cols-2 gap-4">
-            <div className="space-y-4">
-              <div className="relative h-64 rounded-2xl overflow-hidden shadow-lg">
-                <Image
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&q=80"
-                  alt="Technology and Innovation"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 300px"
-                />
-              </div>
-              <div className="relative h-48 rounded-2xl overflow-hidden shadow-lg">
-                <Image
-                  src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=500&q=80"
-                  alt="IoT and Smart Technology"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 300px"
-                />
-              </div>
-            </div>
-            <div className="space-y-4 pt-8">
-              <div className="relative h-48 rounded-2xl overflow-hidden shadow-lg">
-                <Image
-                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&q=80"
-                  alt="Software Development"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 300px"
-                />
-              </div>
-              <div className="relative h-64 rounded-2xl overflow-hidden shadow-lg">
-                <Image
-                  src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=500&q=80"
-                  alt="Team Collaboration"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 300px"
-                />
-              </div>
-            </div>
-          </div>
+          {/* Right — Node network visual */}
+          <Reveal delay={200} className="flex items-center justify-center">
+            <NodeNetwork />
+          </Reveal>
         </div>
       </div>
     </section>
