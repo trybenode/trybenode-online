@@ -1,11 +1,11 @@
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import GridBackground from "@/components/GridBackground";
 
 export default function CTA() {
   return (
     <section className="relative py-20 sm:py-28 bg-linear-to-br from-[#2d236d] to-[#725eed] overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(#ffffff14_1px,transparent_1px)] bg-size-[26px_26px] mask-[radial-gradient(ellipse_70%_70%_at_50%_50%,black,transparent)]" />
-      <div className="absolute top-0 right-0 w-96 h-96 bg-[#fbeb78] rounded-full blur-[120px] opacity-[0.12] -mr-40 -mt-40" />
+      <GridBackground variant="dark" />
 
       <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <Reveal as="h2" className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6">

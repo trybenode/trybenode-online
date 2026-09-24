@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import NodeNetwork from "@/components/NodeNetwork";
+import GridBackground from "@/components/GridBackground";
 
 const badges = [
   {
@@ -29,9 +30,7 @@ const badges = [
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-white pt-14 pb-20 sm:pt-20 sm:pb-28">
-      {/* Background */}
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(#00000010_1px,transparent_1px)] bg-size-[26px_26px] mask-[radial-gradient(ellipse_60%_60%_at_50%_0%,black,transparent)]" />
-      <div className="absolute top-0 right-0 w-[28rem] h-[28rem] bg-[#725eed] rounded-full blur-[120px] opacity-[0.07] -mr-40 -mt-40" />
+      <GridBackground />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
