@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from "react";
+import Reveal from "@/components/Reveal";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -44,7 +45,7 @@ export default function ContactForm() {
       }
 
       setStatus({ submitting: false, submitted: true, error: null });
-      
+
       // Reset form after 3 seconds
       setTimeout(() => {
         setFormData({
@@ -59,55 +60,57 @@ export default function ContactForm() {
 
     } catch (error) {
       console.error('Form submission error:', error);
-      setStatus({ 
-        submitting: false, 
-        submitted: false, 
-        error: error.message || 'Something went wrong. Please try again.' 
+      setStatus({
+        submitting: false,
+        submitted: false,
+        error: error.message || 'Something went wrong. Please try again.'
       });
     }
   };
 
+  const inputClasses = "w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#725eed]/30 focus:border-[#725eed] outline-none transition-all";
+
   return (
     <section className="py-20 bg-white">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <Reveal className="text-center mb-12">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">
             Send us a <span className="text-[#725eed]">Message</span>
           </h2>
           <p className="text-sm sm:text-base text-gray-600">
-            Fill out the form below and we'll get back to you within 24 hours.
+            Fill out the form below and we&apos;ll get back to you within 24 hours.
           </p>
-        </div>
+        </Reveal>
 
         {status.submitted && (
-          <div className="mb-8 p-6 bg-green-50 border-2 border-green-500 rounded-lg">
+          <div className="mb-8 p-6 bg-emerald-50 border border-emerald-200 rounded-xl">
             <div className="flex items-center gap-3">
-              <svg className="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               <div>
-                <h3 className="text-lg font-semibold text-green-800">Message Sent Successfully!</h3>
-                <p className="text-sm text-green-700 mt-1">Thank you for reaching out. We'll get back to you within 24 hours.</p>
+                <h3 className="text-lg font-semibold text-emerald-800">Message sent</h3>
+                <p className="text-sm text-emerald-700 mt-1">Thank you for reaching out. We&apos;ll get back to you within 24 hours.</p>
               </div>
             </div>
           </div>
         )}
 
         {status.error && (
-          <div className="mb-8 p-6 bg-red-50 border-2 border-red-500 rounded-lg">
+          <div className="mb-8 p-6 bg-red-50 border border-red-200 rounded-xl">
             <div className="flex items-center gap-3">
-              <svg className="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 text-red-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               <div>
-                <h3 className="text-lg font-semibold text-red-800">Error</h3>
+                <h3 className="text-lg font-semibold text-red-800">Something went wrong</h3>
                 <p className="text-sm text-red-700 mt-1">{status.error}</p>
               </div>
             </div>
           </div>
         )}
 
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <Reveal delay={80} as="form" onSubmit={handleSubmit} className="space-y-6">
           <div>
             <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
               Full Name *
@@ -119,7 +122,7 @@ export default function ContactForm() {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#725eed] focus:border-transparent outline-none transition-all"
+              className={inputClasses}
               placeholder="John Doe"
             />
           </div>
@@ -136,7 +139,7 @@ export default function ContactForm() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#725eed] focus:border-transparent outline-none transition-all"
+                className={inputClasses}
                 placeholder="john@example.com"
               />
             </div>
@@ -151,7 +154,7 @@ export default function ContactForm() {
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#725eed] focus:border-transparent outline-none transition-all"
+                className={inputClasses}
                 placeholder="080 456 7890"
               />
             </div>
@@ -168,7 +171,7 @@ export default function ContactForm() {
               value={formData.subject}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#725eed] focus:border-transparent outline-none transition-all"
+              className={inputClasses}
               placeholder="How can we help you?"
             />
           </div>
@@ -184,7 +187,7 @@ export default function ContactForm() {
               onChange={handleChange}
               required
               rows={6}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#725eed] focus:border-transparent outline-none transition-all resize-none"
+              className={`${inputClasses} resize-none`}
               placeholder="Tell us about your project..."
             />
           </div>
@@ -192,7 +195,7 @@ export default function ContactForm() {
           <button
             type="submit"
             disabled={status.submitting}
-            className="w-full px-6 py-3 sm:px-8 sm:py-4 bg-[#2d236d] text-white text-sm sm:text-base font-semibold rounded-lg hover:bg-[#725eed] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:transform-none flex items-center justify-center gap-2">
+            className="w-full px-6 py-3.5 sm:px-8 sm:py-4 bg-[#2d236d] text-white text-sm sm:text-base font-semibold rounded-full hover:bg-[#725eed] transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2">
             {status.submitting ? (
               <>
                 <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -203,7 +206,7 @@ export default function ContactForm() {
               </>
             ) : 'Send Message'}
           </button>
-        </form>
+        </Reveal>
       </div>
     </section>
   );
