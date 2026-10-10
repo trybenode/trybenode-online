@@ -17,7 +17,7 @@ export const metadata = {
     default: "TrybeNode - Building Digital Solutions for Modern Businesses",
     template: "%s | TrybeNode"
   },
-  description: "TrybeNode delivers cutting-edge e-commerce platforms, automated business systems, and IoT solutions. Based in Ibadan, Nigeria, we build scalable digital products that drive growth for startups and enterprises.",
+  description: "TrybeNode delivers cutting-edge e-commerce platforms, automated business systems, and IoT solutions. Based in Lagos, Ibadan, and Abuja Nigeria, we build scalable digital products that drive growth for startups and enterprises.",
   keywords: ["e-commerce development Nigeria", "custom software development", "automated systems", "IoT solutions", "mobile app development", "web development Ibadan", "TrybeNode", "PropTech", "AgriTech", "TrybeMarket"],
   authors: [{ name: "TrybeNode" }],
   creator: "TrybeNode",

@@ -5,7 +5,7 @@ import Reveal from "@/components/Reveal";
 import GridBackground from "@/components/GridBackground";
 
 export const metadata = {
-  title: "Contact TrybeNode - Start a Project | Ibadan, Nigeria",
+  title: "Contact TrybeNode - Start a Project | Lagos, Ibadan, and Abuja, Nigeria.",
   description:
     "Have an idea worth building? Contact TrybeNode's software studio for custom software, e-commerce platforms, and automated systems. Located at Leadcity University, Ibadan. Email: contact@trybenode.online",
   keywords:
@@ -17,7 +17,7 @@ export const metadata = {
     siteName: "TrybeNode",
     title: "Contact TrybeNode - Start a Project",
     description:
-      "Get in touch with TrybeNode's software studio, based in Ibadan, Nigeria.",
+      "Get in touch with TrybeNode's software studio, based in Lagos, Ibadan, and Abuja, Nigeria.",
     images: [
       {
         url: "https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1200&q=80",
@@ -31,7 +31,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Contact TrybeNode - Start a Project",
     description:
-      "Have an idea worth building? Contact TrybeNode in Ibadan, Nigeria.",
+      "Have an idea worth building? Contact TrybeNode in Lagos, Ibadan, and Abuja, Nigeria.",
     images: [
       "https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1200&q=80",
     ],

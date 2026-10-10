@@ -39,7 +39,7 @@ export default function Hero() {
             <Reveal className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-gray-200 bg-gray-50 mb-6 sm:mb-8">
               <span className="w-1.5 h-1.5 rounded-full bg-[#725eed] animate-node-pulse" style={{ transformOrigin: "center" }} />
               <span className="text-xs font-semibold tracking-wide text-gray-600 uppercase">
-                Software studio · Ibadan, Nigeria
+                Software studio · Lagos, Ibadan, and Abuja, Nigeria.
               </span>
             </Reveal>
 

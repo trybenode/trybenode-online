@@ -21,7 +21,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-gray-400 mb-6 max-w-md leading-relaxed">
-              A software studio in Ibadan, Nigeria. We build products ourselves,
+              A software studio in Nigeria. We build products ourselves,
               then grow the strongest into independent ventures.
             </p>
             <div className="flex gap-4">

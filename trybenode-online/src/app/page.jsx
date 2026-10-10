@@ -8,7 +8,7 @@ import JsonLd, { organizationSchema, websiteSchema, serviceSchema } from "@/comp
 
 export const metadata = {
   title: "TrybeNode - A Software Studio Building Ventures | TrybeMarket & Custom Software",
-  description: "TrybeNode is a software studio based in Ibadan, Nigeria. We build products in-house and spin the strongest ones into independent ventures — starting with TrybeMarket.",
+  description: "TrybeNode is a software studio based in Lagos, Ibadan, and Abuja, Nigeria. We build products in-house and spin the strongest ones into independent ventures — starting with TrybeMarket.",
   keywords: "software studio Nigeria, startup studio, TrybeMarket, custom software development, e-commerce development, automated business systems, IoT solutions, PropTech, AgriTech, web development Ibadan, TrybeNode",
   authors: [{ name: "TrybeNode" }],
   creator: "TrybeNode",
@@ -19,7 +19,7 @@ export const metadata = {
     url: "https://trybenode.online",
     siteName: "TrybeNode",
     title: "TrybeNode - A Software Studio Building Ventures",
-    description: "We build the software, then we build the company. TrybeNode is a software studio in Ibadan, Nigeria — TrybeMarket is our first venture.",
+    description: "We build the software, then we build the company. TrybeNode is a software studio in Lagos, Ibadan, and Abuja, Nigeria. — TrybeMarket is our first venture.",
     images: [
       {
         url: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&q=80",
@@ -32,7 +32,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "TrybeNode - A Software Studio Building Ventures",
-    description: "We build the software, then we build the company. TrybeNode is a software studio in Ibadan, Nigeria.",
+    description: "We build the software, then we build the company. TrybeNode is a software studio in Lagos, Ibadan, and Abuja, Nigeria.",
     images: ["https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&q=80"],
   },
   robots: {
