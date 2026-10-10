@@ -18,8 +18,8 @@ export async function POST(request) {
 
     // Send email to TrybeNode
     const { data, error } = await resend.emails.send({
-      from: 'TrybeNode Website <contact@trybenode.space>',
-      to: [process.env.TRYBENODE_EMAIL || 'contact@trybenode.space'],
+      from: 'TrybeNode Website <contact@trybenode.online>',
+      to: [process.env.TRYBENODE_EMAIL || 'contact@trybenode.online'],
       replyTo: email,
       subject: `New Contact Form Submission: ${subject}`,
       html: `
@@ -150,7 +150,7 @@ export async function POST(request) {
 
     // Optionally send confirmation email to user
     await resend.emails.send({
-      from: 'TrybeNode <contact@trybenode.space>',
+      from: 'TrybeNode <contact@trybenode.online>',
       to: email,
       subject: 'Thank you for contacting TrybeNode',
       html: `
