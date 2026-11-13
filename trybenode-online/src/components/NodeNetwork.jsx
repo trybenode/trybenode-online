@@ -1,6 +1,6 @@
 const HUB = { x: 100, y: 232 };
 const TRYBEMARKET = { x: 306, y: 108 };
-const VENTURE_A = { x: 366, y: 262 };
+const TRYBETRUST = { x: 366, y: 262 };
 const VENTURE_B = { x: 262, y: 382 };
 
 const pct = (v) => `${(v / 440) * 100}%`;
@@ -13,15 +13,18 @@ export default function NodeNetwork() {
         className="absolute inset-0 w-full h-full overflow-visible"
         aria-hidden="true"
       >
-        {/* Dormant connections — the ventures still to come */}
+        {/* Live connection to trybetrust */}
         <path
           d="M100,232 Q240,244 366,262"
           fill="none"
-          stroke="#d1d5db"
-          strokeWidth="1.5"
-          strokeDasharray="2 6"
+          stroke="#725eed"
+          strokeWidth="2"
+          strokeDasharray="1 9"
           strokeLinecap="round"
+          className="animate-dash-flow"
         />
+
+        {/* Dormant connection — the next venture still to come */}
         <path
           d="M100,232 Q190,330 262,382"
           fill="none"
@@ -70,8 +73,11 @@ export default function NodeNetwork() {
         <circle cx={TRYBEMARKET.x} cy={TRYBEMARKET.y} r="18" fill="#725eed" />
         <circle cx={TRYBEMARKET.x} cy={TRYBEMARKET.y} r="18" fill="none" stroke="#fff" strokeWidth="2" />
 
-        {/* Future venture nodes */}
-        <circle cx={VENTURE_A.x} cy={VENTURE_A.y} r="10" fill="#fff" stroke="#d1d5db" strokeWidth="1.5" />
+        {/* trybetrust node */}
+        <circle cx={TRYBETRUST.x} cy={TRYBETRUST.y} r="14" fill="#725eed" />
+        <circle cx={TRYBETRUST.x} cy={TRYBETRUST.y} r="14" fill="none" stroke="#fff" strokeWidth="2" />
+
+        {/* Future venture node */}
         <circle cx={VENTURE_B.x} cy={VENTURE_B.y} r="10" fill="#fff" stroke="#d1d5db" strokeWidth="1.5" />
       </svg>
 
@@ -96,11 +102,12 @@ export default function NodeNetwork() {
       </div>
 
       <div
-        className="absolute translate-x-4 -translate-y-1/2"
-        style={{ left: pct(VENTURE_A.x), top: pct(VENTURE_A.y) }}
+        className="absolute -translate-x-1/2 translate-y-6"
+        style={{ left: pct(TRYBETRUST.x), top: pct(TRYBETRUST.y) }}
       >
-        <span className="text-[11px] font-medium text-gray-400 whitespace-nowrap">
-          Venture 02
+        <span className="flex items-center gap-1.5 text-xs font-semibold text-white bg-[#2d236d] px-2.5 py-1 rounded-full whitespace-nowrap">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#fbeb78]" />
+          trybetrust
         </span>
       </div>
 

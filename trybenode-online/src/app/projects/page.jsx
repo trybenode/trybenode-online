@@ -55,6 +55,25 @@ export default function Projects() {
         "/trybemarket-3.jpeg"
       ],
       link: "https://trybemarket.online"
+    },
+    {
+      title: "trybetrust",
+      tag: "Hackathon MVP",
+      description: "Identity is not trust. trybetrust is a trust infrastructure for gig work that turns verified identity, job outcomes, and payment protections into a portable reputation — so workers keep their track record when they move between platforms, and clients can hire with confidence.",
+      features: [
+        "Trust-band scoring from verified identity, work history, and performance",
+        "Escrow-backed payments with a guarantor and dispute process",
+        "Portable work records workers can export and import across platforms",
+        "Continuous monitoring with risk flags and status history",
+        "Platform API and developer portal for integrating trust checks",
+      ],
+      technologies: ["Next.js", "FastAPI", "PostgreSQL", "Redis", "Tailwind CSS"],
+      images: [
+        "/trybetrust-1.jpeg",
+        "/trybetrust-2.jpeg",
+        "/trybetrust-3.jpeg"
+      ],
+      link: "https://hackathon-8yv2.vercel.app"
     }
     // Add more ventures here as they launch
   ];
@@ -88,6 +107,7 @@ export default function Projects() {
                 <ProjectCard
                   key={index}
                   title={project.title}
+                  tag={project.tag}
                   description={project.description}
                   features={project.features}
                   technologies={project.technologies}
@@ -98,13 +118,13 @@ export default function Projects() {
               ))}
             </div>
 
-            {/* Venture 02 teaser — the studio's next node */}
+            {/* Venture 03 teaser — the studio's next node */}
             <Reveal delay={150} className="mt-32 max-w-3xl mx-auto">
               <div className="relative rounded-2xl border-2 border-dashed border-gray-300 bg-white/60 p-10 sm:p-14 text-center">
                 <div className="w-14 h-14 mx-auto mb-6 rounded-full border-2 border-dashed border-gray-300 flex items-center justify-center">
                   <span className="w-2.5 h-2.5 rounded-full bg-gray-300 animate-node-pulse" style={{ transformOrigin: "center" }} />
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold text-gray-400 mb-2">Venture 02</h3>
+                <h3 className="text-lg sm:text-xl font-bold text-gray-400 mb-2">Venture 03</h3>
                 <p className="text-sm sm:text-base text-gray-400 max-w-md mx-auto">
                   The next node is already taking shape. If you&apos;ve got the idea it could grow from, we&apos;d like to hear it.
                 </p>

@@ -20,6 +20,7 @@ function ScreenshotPlaceholder({ index, size = "sm" }) {
 
 export default function ProjectCard({
   title,
+  tag,
   description,
   features,
   technologies,
@@ -111,6 +112,11 @@ export default function ProjectCard({
 
       {/* Content Section */}
       <Reveal delay={120} className={`${reverse ? 'lg:order-1' : 'lg:order-2'}`}>
+        {tag && (
+          <span className="inline-block mb-3 px-3 py-1 rounded-full bg-[#fbeb78] text-[#2d236d] text-xs font-bold uppercase tracking-wider">
+            {tag}
+          </span>
+        )}
         <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">
           {title}
         </h3>

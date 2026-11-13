@@ -101,9 +101,20 @@ export default function Footer() {
                   TrybeMarket
                 </a>
               </li>
+              <li>
+                <a
+                  href="https://hackathon-8yv2.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-gray-400 hover:text-[#fbeb78] transition-colors"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#fbeb78]" />
+                  trybetrust
+                </a>
+              </li>
               <li className="inline-flex items-center gap-2 text-gray-600">
                 <span className="w-1.5 h-1.5 rounded-full border border-dashed border-gray-600" />
-                Venture 02
+                Venture 03
               </li>
             </ul>
           </div>
