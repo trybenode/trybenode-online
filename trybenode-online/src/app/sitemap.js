@@ -19,6 +19,12 @@ export default function sitemap() {
       priority: 0.9,
     },
     {
+      url: 'https://trybenode.online/community',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
       url: 'https://trybenode.online/contact',
       lastModified: new Date(),
       changeFrequency: 'monthly',

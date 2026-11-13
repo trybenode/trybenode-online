@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import WhyTrybeNode from "@/components/WhyTrybeNode";
 import Services from "@/components/Services";
+import CommunityTeaser from "@/components/CommunityTeaser";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import JsonLd, { organizationSchema, websiteSchema, serviceSchema } from "@/components/JsonLd";
@@ -59,6 +60,7 @@ export default function HomePage() {
         <Hero />
         <WhyTrybeNode />
         <Services />
+        <CommunityTeaser />
         <CTA />
       </main>
       <Footer />
